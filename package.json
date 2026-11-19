@@ -1,0 +1,9 @@
+{
+  "name": "northstar-storefront",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A full-stack storefront built with Node.js and vanilla JavaScript.",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f8f7f3">
+    <meta name="description" content="Thoughtful everyday objects for a slower, softer home.">
+    <title>Northstar — Good things for everyday</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <div class="announcement">A little more joy in every day <span>·</span> Free shipping on orders over $75</div>
+    <header class="site-header">
+      <a class="wordmark" href="#" aria-label="Northstar home">northstar<span>®</span></a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#shop">Shop all</a>
+        <a href="#story">Our approach</a>
+      </nav>
+      <button class="cart-button" id="cart-open" type="button" aria-label="Open shopping bag">
+        Bag <span id="cart-count" class="cart-count">0</span>
+      </button>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">A home to come back to</p>
+          <h1>Make room<br>for <em>the good</em><br>everyday.</h1>
+          <p class="hero-description">Considered pieces for the little moments that make a place feel like yours.</p>
+          <a class="button button-dark" href="#shop">Find your everyday <span aria-hidden="true">↗</span></a>
+          <div class="hero-note"><span class="note-star">✳</span> Thoughtfully made. Made to be lived in.</div>
+        </div>
+        <div class="hero-art" aria-label="Illustration of a warm, calm living room">
+          <div class="sun-disc"></div>
+          <div class="art-window"><div class="window-glow"></div><div class="window-line vertical"></div><div class="window-line horizontal"></div></div>
+          <div class="art-plant"><i></i><i></i><i></i><i></i><b></b></div>
+          <div class="art-table"><div class="table-top"></div><div class="table-leg"></div><div class="table-base"></div><div class="art-vase"><span></span></div></div>
+          <div class="art-lamp"><div class="lamp-shade"></div><div class="lamp-neck"></div><div class="lamp-foot"></div></div>
+          <div class="art-sofa"><div class="sofa-back"></div><div class="sofa-seat"></div><div class="sofa-arm left"></div><div class="sofa-arm right"></div><div class="sofa-leg one"></div><div class="sofa-leg two"></div><div class="sofa-pillow"></div></div>
+          <div class="art-rug"></div>
+          <span class="art-caption">Slow mornings, soft landings.</span>
+        </div>
+      </section>
+
+      <section class="values" id="story" aria-label="Our values">
+        <p><span>01</span> Made for real life</p>
+        <p><span>02</span> Thoughtful by design</p>
+        <p><span>03</span> Better, not more</p>
+      </section>
+
+      <section class="shop-section" id="shop">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Little things, lovely living</p>
+            <h2>Everyday favorites</h2>
+          </div>
+          <span class="product-count" id="product-count">A few good things</span>
+        </div>
+        <div class="product-grid" id="product-grid" aria-live="polite">
+          <p class="loading-message">Gathering the good things…</p>
+        </div>
+      </section>
+
+      <section class="closing-note">
+        <span class="closing-flower">✳</span>
+        <p>Less rush. More <em>room to breathe.</em></p>
+        <span class="closing-subtitle">A softer kind of everyday starts at home.</span>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="wordmark footer-mark" href="#">northstar<span>®</span></a>
+      <span>Good things for everyday.</span>
+      <span>Made with care, for the place you call home.</span>
+    </footer>
+
+    <div class="drawer-backdrop" id="drawer-backdrop"></div>
+    <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping bag" aria-hidden="true">
+      <div class="drawer-header">
+        <div><p class="eyebrow">Your little collection</p><h2>Your bag <span id="drawer-count"></span></h2></div>
+        <button class="icon-button" id="cart-close" type="button" aria-label="Close shopping bag">×</button>
+      </div>
+      <div class="cart-items" id="cart-items"></div>
+      <form class="checkout-form" id="checkout-form">
+        <div class="cart-total"><span>Subtotal</span><strong id="cart-total">$0.00</strong></div>
+        <p class="shipping-note">Shipping and taxes calculated at checkout.</p>
+        <label for="customer-name">Your name</label>
+        <input id="customer-name" name="name" autocomplete="name" required minlength="2" maxlength="100" placeholder="First and last name">
+        <label for="customer-email">Email address</label>
+        <input id="customer-email" name="email" type="email" autocomplete="email" required maxlength="254" placeholder="you@example.com">
+        <button class="button button-dark checkout-button" id="checkout-button" type="submit">Place your order <span aria-hidden="true">↗</span></button>
+        <p class="form-message" id="form-message" role="status"></p>
+      </form>
+    </aside>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
